@@ -48,8 +48,8 @@ public class FXMLController {
     	this.cmbLocale.getItems().clear();
     	String citta = this.cmbCitta.getValue();
     	if(citta != null) {
-    		//TODO popolare la tendina dei locali per la città selezionata
-    		
+    		List<String> cities = this.model.getCities();
+    		this.cmbCitta.getItems().addAll(cities);
     	}
     }
 
